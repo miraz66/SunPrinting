@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="bg-green-50">
-      <div className="font-display bg-black overflow-x-hidden">
+      <div className="font-rubik bg-black overflow-x-hidden">
         <BrowserRouter>
           <Routes>
             <Route

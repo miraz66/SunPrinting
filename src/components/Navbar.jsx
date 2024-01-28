@@ -21,7 +21,7 @@ export default function Example() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-0 py-1">
             <div className="relative flex h-24 items-center justify-between">
-              <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
@@ -46,7 +46,7 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="hidden sm:ml-6 sm:block">
+              <div className="hidden sm:ml-6 lg:block">
                 <div className="flex space-x-4">
                   {navigation.map((item) => (
                     <a
@@ -54,8 +54,8 @@ export default function Example() {
                       href={item.href}
                       className={classNames(
                         item.current
-                          ? "bg-yellow-400 text-black"
-                          : "text-gray-600 hover:bg-yellow-100 hover:text-black",
+                          ? "bg-primary text-gray-700"
+                          : "text-gray-600 hover:bg-muted hover:text-black",
                         "rounded-md px-5 py-2 text-base font-medium"
                       )}
                       aria-current={item.current ? "page" : undefined}
@@ -66,7 +66,7 @@ export default function Example() {
                 </div>
               </div>
 
-              <Menu as="div" className="relative ml-3">
+              <Menu as="div" className="relative ml-3 hidden lg:block">
                 <div>
                   <Menu.Button className="relative tracking-wide flex rounded-full text-white px-6 py-2 bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <p>Contact</p>
@@ -127,7 +127,7 @@ export default function Example() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="lg:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -145,6 +145,12 @@ export default function Example() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+
+              <div className="pt-5">
+                <button className="block bg-secondary text-white rounded-md px-4 py-2 text-base font-medium">
+                  Contact
+                </button>
+              </div>
             </div>
           </Disclosure.Panel>
         </>

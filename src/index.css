@@ -1,43 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background-primary-color: 3, 7, 18;
-  --background-secondary-color: 101, 163, 13;
-  --background-muted-color: 132, 204, 22;
-  --text-primary-color: 23, 23, 23;
+  --background-primary-color: 234, 179, 8;
+  --background-secondary-color: 239, 68, 68;
+  --background-muted-color: 254, 249, 195;
+  --text-primary-color: 0, 0, 0;
   --text-secondary-color: 38, 38, 38;
-  --text-muted-color: 64, 64, 64;
-  --text-current-color: 101, 163, 13;
-}
-
-.calendar_container {
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 240px;
-}
-.calendar_button {
-  border: none;
-  background-color: rgb(22, 96, 255);
-  padding: 13px 23px;
-  border-radius: 10px;
-  color: white;
-  text-shadow: rgb(0 0 0 / 42%) 0px 0px 17px;
-}
-.calendar_button:hover {
-  cursor: pointer;
-}
-
-.react-calendar__tile--now {
-  background: rgb(196, 196, 196) !important;
-}
-.react-calendar__tile--active {
-  background: rgb(145, 143, 140) !important;
+  --text-muted-color: 255, 255, 255;
+  --text-current-color: 239, 68, 68;
 }

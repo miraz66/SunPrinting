@@ -18,7 +18,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Rubik", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
+        handle: ["Handlee", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       backgroundColor: {
         primary: withOpacity("--background-primary-color"),
@@ -26,10 +28,10 @@ export default {
         muted: withOpacity("--background-muted-color"),
       },
       textColor: {
-        primary: withOpacity("--text-primary-color"),
-        current: withOpacity("--text-current-color"),
-        secondary: withOpacity("--text-secondary-color"),
-        muted: withOpacity("--text-muted-color"),
+        primary_color: withOpacity("--text-primary-color"),
+        current_color: withOpacity("--text-current-color"),
+        secondary_color: withOpacity("--text-secondary-color"),
+        muted_color: withOpacity("--text-muted-color"),
       },
     },
   },
