@@ -1,3 +1,4 @@
+import Award from "../components/Award";
 import Blog from "../components/Blog";
 import HeroAbout from "../components/HeroAbout";
 import HeroSection from "../components/HeroSection";
@@ -16,10 +17,9 @@ export default function Home() {
       </div>
 
       <HeroAbout />
-
       <Blog />
-
       <HeroServices />
+      <Award />
     </div>
   );
 }

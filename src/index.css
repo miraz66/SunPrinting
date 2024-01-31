@@ -13,5 +13,5 @@
   --text-primary-color: 0, 0, 0;
   --text-secondary-color: 38, 38, 38;
   --text-muted-color: 255, 255, 255;
-  --text-current-color: 239, 68, 68;
+  --text-current-color: 220, 38, 38; /* red 600 */
 }
