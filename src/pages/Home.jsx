@@ -19,7 +19,7 @@ export default function Home() {
 
       <Blog />
 
-      {/* <HeroServices /> */}
+      <HeroServices />
     </div>
   );
 }

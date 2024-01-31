@@ -1,4 +1,4 @@
-import React from "react";
+import AboutBanner from "../assets/banner-1.png";
 
 export default function HeroAbout() {
   return (
@@ -29,7 +29,7 @@ export default function HeroAbout() {
                             aspectRatio: "655 / 680",
                           }}
                           sizes="(min-width: 1024px) 41rem, 31rem"
-                          src="https://printress.codelayers.net/images/banner/banner-1.png"
+                          src={AboutBanner}
                         />
                       </foreignObject>
                     </g>

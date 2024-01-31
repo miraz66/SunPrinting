@@ -2,7 +2,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 
 export default function HeroSection() {
   return (
-    <div className="h-[55rem] bg-contain bg-right bg-no-repeat bg-[url('./assets/keila-hotzel.png')]">
+    <div className="h-[55rem] bg-contain bg-right bg-no-repeat bg-[url('./assets/undraw_online_payments_re_y8f2.svg')]">
       <div className="max-w-7xl mx-auto justify-between">
         <div className="py-44">
           <h5 className="text-xl font-medium text-current_color font-handle ">
