@@ -8,7 +8,7 @@ export default function HeroAbout() {
         <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
           <div className="flex justify-center">
             <div
-              className="w-[26rem] md:w-[44rem] flex-none lg:w-[52rem]"
+              className="w-[24rem] sm:w-[26rem] md:w-[44rem] flex-none lg:w-[52rem]"
               style={{ opacity: 1, transform: "none" }}
             >
               <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-[719/680] w-full">
@@ -17,7 +17,7 @@ export default function HeroAbout() {
                     <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
                       <foreignObject width="655" height="680">
                         <img
-                          alt=""
+                          alt="painting images"
                           loading="lazy"
                           width="2400"
                           height="1800"
