@@ -1,4 +1,4 @@
-import SunLogo from "../../public/SunPrintingLogo.png";
+import SunLogo from "../assets/SunPrintingLogo.png";
 
 export default function Footer() {
   return (
