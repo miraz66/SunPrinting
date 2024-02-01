@@ -100,10 +100,10 @@ export default function Footer() {
 
           <div className="pb-10 mt-16 md:mt-24 flex flex-wrap items-center justify-center lg:justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
             <a className="flex items-center gap-4" aria-label="Home" href="/">
-              <img className="h-20" src={SunLogo} alt="" />
-              <p className="text-3xl">Sun Printing Press</p>
+              <img className="h-16 sm:h-20" src={SunLogo} alt="" />
+              <p className="text-xl sm:text-3xl">Sun Printing Press</p>
             </a>
-            <p className="text-sm text-neutral-700">
+            <p className="text-sm font-playfair text-neutral-700">
               ©Copyright 2024 - Sun Printing Press. All Rights Reserved.
             </p>
           </div>
