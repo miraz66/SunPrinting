@@ -97,7 +97,7 @@ export default function Award() {
           <p className="text-center text-2xl font-handle">
             <span className="text-current_color">100+</span> Happy Sponsors
           </p>
-          <div className="grid mt-20 grid-cols-5 gap-10 justify-between">
+          <div className="grid mt-20 grid-cols-3 md:grid-cols-5 auto-rows-auto gap-10 justify-between">
             {BrandLogoData.map(({ alt, logo }) => (
               <img
                 className="opacity-60 hover:opacity-100 ease-in-out duration-300"

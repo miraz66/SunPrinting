@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "../assets/SunPrintingLogo.png";
+import logo from "../../public/SunPrintingLogo.png";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
