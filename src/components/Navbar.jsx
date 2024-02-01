@@ -42,7 +42,7 @@ export default function Example() {
                       alt="Your Company"
                     />
 
-                    <div className="text-3xl text-neutral-600 md:text-4xl font-serif tracking-wide font-semibold">
+                    <div className="text-xl sm:text-3xl text-neutral-600 md:text-4xl font-serif tracking-wide font-semibold">
                       Sun Printing press
                     </div>
                   </div>
