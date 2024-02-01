@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="lg:h-[55rem] bg-cover md:bg-contain bg-right bg-no-repeat bg-[url('./assets/banner-1.png')]">
         <div className="max-w-7xl mx-5 md:mx-10 xl:mx-auto opacity-100">
           <div className="pb-20 pt-40 lg:py-44">
-            <h5 className="text-xl lg:text-2xl pb-2 font-medium text-yellow-500 font-handle ">
+            <h5 className="sm:text-xl lg:text-2xl pb-2 font-medium text-yellow-500 font-handle ">
               Welcome To Our Company
             </h5>
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-semibold pb-16 text-muted_color tracking-tight leading- font-playfair">
@@ -16,12 +16,10 @@ export default function HeroSection() {
               When we say we’re not happy until you’re happy, we really do mean
               it. You <br /> will be happy with service.
             </p>
-            <div className="">
-              <button className="text-lg mt-24 flex gap-2 items-center font-medium rounded-lg bg-primary text-secondary_color px-6 py-3">
-                <PlayIcon className="h-6 w-6 text-current_color" />
-                Watch Video
-              </button>
-            </div>
+            <button className="text-lg mt-14 sm:mt-24 flex gap-2 items-center font-medium rounded-lg bg-primary text-secondary_color px-6 py-3">
+              <PlayIcon className="h-6 w-6 text-current_color" />
+              Watch Video
+            </button>
           </div>
         </div>
       </div>
