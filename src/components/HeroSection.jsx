@@ -9,7 +9,7 @@ export default function HeroSection() {
             <h5 className="text-xl lg:text-2xl pb-2 font-medium text-yellow-500 font-handle ">
               Welcome To Our Company
             </h5>
-            <h1 className="text-7xl lg:text-8xl font-semibold pb-16 text-muted_color tracking-tight leading- font-playfair">
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-semibold pb-16 text-muted_color tracking-tight leading- font-playfair">
               First & Quality <br /> Printing Press
             </h1>
             <p className="text-muted_color pl-4 text-lg relative after:absolute after:left-0 after:top-0 after:h-full after:w-0.5 after:bg-secondary">

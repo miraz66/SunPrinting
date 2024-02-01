@@ -5,7 +5,7 @@ export default function TailUsProject() {
 
   return (
     <>
-      <div className="-mt-64 max-xl:mx-10">
+      <div className="-mt-64 mx-5 sm:mx-10 xl:mx-0">
         <div className="max-w-7xl mx-auto bg-red-600 py-20 md:py-24 px-6 md:px-10 xl:px-20 2xl:px-40 rounded-[60px]">
           <h3 className="pb-8 text-3xl md:text-4xl text-neutral-100 font-semibold tracking-tighter">
             Tell us about your project !
