@@ -1,14 +1,14 @@
-import AboutBanner from "../assets/banner-1.png";
+import AboutBanner from "../assets/features.jpg";
 
 export default function HeroAbout() {
   return (
-    <div className="py-52">
+    <div className="py-24 md:py-52">
       {" "}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 group/section [counter-increment:section]">
+      <div className="max-w-7xl mx-5 md:mx-10 lg:mx-auto group/section [counter-increment:section]">
         <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
           <div className="flex justify-center">
             <div
-              className="w-[33.75rem] flex-none lg:w-[52rem]"
+              className="w-[26rem] md:w-[44rem] flex-none lg:w-[52rem]"
               style={{ opacity: 1, transform: "none" }}
             >
               <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-[719/680] w-full">

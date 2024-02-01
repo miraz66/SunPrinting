@@ -8,7 +8,7 @@
 
 :root {
   --background-primary-color: 234, 179, 8;
-  --background-secondary-color: 239, 68, 68;
+  --background-secondary-color: 220, 38, 38; /* red 600 */
   --background-muted-color: 254, 249, 195;
   --text-primary-color: 0, 0, 0;
   --text-secondary-color: 38, 38, 38;

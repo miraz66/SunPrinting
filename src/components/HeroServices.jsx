@@ -43,15 +43,15 @@ const CardData = [
 
 export default function HeroServices() {
   return (
-    <div className="bg-gray-50/70 py-16">
-      <div className="max-w-7xl mx-auto py-20 ">
+    <div className="bg-gray-50/70 md:py-16">
+      <div className="max-w-7xl mx-5 md:mx-10 xl:mx-auto py-20 ">
         <div className="text-center">
           <p className="pb-1 text-xl text-current_color">Services</p>
-          <h2 className="text-6xl font-playfair font-semibold">
+          <h2 className="text-4xl md:text-6xl font-playfair font-semibold">
             Our Best Services
           </h2>
         </div>
-        <div className="pt-28 grid grid-cols-4 grid-rows-2 gap-14">
+        <div className="pt-28 space-y-10 md:grid grid-cols-3 xl:grid-cols-4 auto-rows-auto gap-14">
           {CardData.map(({ title, icon }, index) => (
             <div
               key={index}
@@ -60,7 +60,7 @@ export default function HeroServices() {
               <div className="pb-5 group-hover:-translate-y-2 group-hover:ease-in-out group-hover:duration-300">
                 {icon}
               </div>
-              <p className="text-2xl font-playfair font-semibold text-neutral-600 tracking-wide">
+              <p className="text-xl lg:text-2xl font-playfair font-semibold text-neutral-600 tracking-wide">
                 {title}
               </p>
             </div>
