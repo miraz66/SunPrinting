@@ -37,7 +37,7 @@ export default function Example() {
                 <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <img
-                      className="h-16 pr-2 md:pr-2 md:h-20 w-auto"
+                      className="h-12 sm:h-16 pr-2 md:pr-2 md:h-20 w-auto"
                       src={logo}
                       alt="Your Company"
                     />
