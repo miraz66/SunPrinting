@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection";
 import HeroServices from "../components/HeroServices";
 import Navbar from "../components/Navbar";
 import TailUsProject from "../components/TailUsProject";
+import WhatsAppWidget from "../components/WhatsAppWidget";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Faq />
       <TailUsProject />
       <Footer />
+      <WhatsAppWidget />
     </div>
   );
 }
