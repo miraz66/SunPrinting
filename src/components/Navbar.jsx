@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/SunPrintingLogo.png";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -50,9 +51,9 @@ export default function Example() {
                 <div className="hidden sm:ml-6 lg:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-primary text-gray-700"
@@ -62,7 +63,7 @@ export default function Example() {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
