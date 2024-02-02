@@ -22,13 +22,15 @@ export default function HeroSection() {
                 When we say we’re not happy until you’re happy, we really do
                 mean it. You <br /> will be happy with service.
               </p>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="text-lg mt-14 sm:mt-24 flex gap-2 items-center font-medium rounded-lg bg-primary text-secondary_color px-6 py-3"
-              >
-                <PlayIcon className="h-6 w-6 text-current_color" />
-                Watch Video
-              </button>
+              <div className="group">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="text-lg mt-14 sm:mt-24 flex gap-2 items-center ease-in-out duration-500 font-medium rounded-lg bg-primary group-hover:bg-secondary text-secondary_color px-6 py-3"
+                >
+                  <PlayIcon className="h-6 w-6 group-hover:text-yellow-500  ease-in-out duration-500 text-current_color" />
+                  Watch Video
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -39,7 +41,10 @@ export default function HeroSection() {
           onClose={() => setIsModalOpen(!isModalOpen)}
           className="fixed inset-0 flex justify-center items-center bg-opacity-70 bg-gray-900 z-50"
         >
-          <VideoPlayer src="aqz-KE-bpKQ" className="rounded-md" />
+          <VideoPlayer
+            src="aqz-KE-bpKQ"
+            className="w-72 md:w-96 h-60 lg:w-[35rem] lg:h-[22rem] xl:w-[60rem] xl:h-[43rem] rounded-md"
+          />
         </Modal>
       )}
     </>
