@@ -5,7 +5,7 @@ import logo from "../assets/SunPrintingLogo.png";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
+  { name: "About", href: "/about", current: false },
   { name: "Services", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
 ];
