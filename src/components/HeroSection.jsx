@@ -43,7 +43,7 @@ export default function HeroSection() {
         >
           <VideoPlayer
             src="kanHxPcIuQo"
-            className="w-72 md:w-96 h-60 lg:w-[35rem] lg:h-[22rem] xl:w-[60rem] xl:h-[43rem] rounded-md"
+            className="w-96 md:w-96 h-60 lg:w-[35rem] lg:h-[22rem] xl:w-[60rem] xl:h-[43rem] rounded-md"
           />
         </Modal>
       )}
