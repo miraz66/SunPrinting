@@ -103,7 +103,7 @@ export default function Footer() {
               <img className="h-16 sm:h-20" src={SunLogo} alt="" />
               <p className="text-xl sm:text-3xl">Sun Printing Press</p>
             </a>
-            <p className="text-sm font-playfair text-neutral-700">
+            <p className="text-xs md:text-sm font-playfair text-neutral-700">
               ©Copyright 2024 - Sun Printing Press. All Rights Reserved.
             </p>
           </div>
