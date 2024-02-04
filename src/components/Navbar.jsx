@@ -3,19 +3,16 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/SunPrintingLogo.png";
 import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "/about", current: false },
-  { name: "Services", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Projects", href: "/projects" },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function Example() {
+export default function Navbar() {
   return (
     <div className="fixed w-full z-50">
       <Disclosure as="nav" className="bg-white bg-opacity-95 shadow-lg">
@@ -54,12 +51,14 @@ export default function Example() {
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-primary text-gray-700"
-                            : "text-gray-600 hover:bg-muted hover:text-black",
-                          "rounded-md px-5 py-2 text-base font-medium"
-                        )}
+                        className={({ isActive }) => {
+                          return clsx(
+                            "rounded-md px-5 py-2 text-base font-medium",
+                            isActive
+                              ? "bg-primary text-gray-700"
+                              : "text-gray-600 hover:bg-muted hover:text-black"
+                          );
+                        }}
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
@@ -88,10 +87,14 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                            className={({ isActive }) => {
+                              return (
+                                "px-3 font-medium" +
+                                (!isActive
+                                  ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
+                                  : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
+                              );
+                            }}
                           >
                             Your Profile
                           </a>
@@ -101,10 +104,14 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                            className={({ isActive }) => {
+                              return (
+                                "px-3 font-medium" +
+                                (!isActive
+                                  ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
+                                  : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
+                              );
+                            }}
                           >
                             Settings
                           </a>
@@ -114,10 +121,14 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                            className={({ isActive }) => {
+                              return (
+                                "px-3 font-medium" +
+                                (!isActive
+                                  ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
+                                  : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
+                              );
+                            }}
                           >
                             Sign out
                           </a>
@@ -136,12 +147,14 @@ export default function Example() {
                     key={item.name}
                     as="NavLink"
                     to={item.href}
-                    className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-800 hover:bg-gray-700 hover:text-white",
-                      "block rounded-md px-3 py-2 text-base font-medium"
-                    )}
+                    className={({ isActive }) => {
+                      return (
+                        "px-3 font-medium" +
+                        (!isActive
+                          ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
+                          : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
+                      );
+                    }}
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}

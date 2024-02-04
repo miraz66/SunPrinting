@@ -1,70 +1,100 @@
-import { BiSolidPrinter, BiSolidTShirt } from "react-icons/bi";
-import { FaClipboardList } from "react-icons/fa6";
-import { MdBrandingWatermark } from "react-icons/md";
-import { FaCopyright } from "react-icons/fa";
-import { TiBusinessCard } from "react-icons/ti";
-import { IoLogoDesignernews } from "react-icons/io";
-import { TbSettingsStar } from "react-icons/tb";
-
-const CardData = [
-  {
-    title: "Printing Service",
-    icon: <BiSolidPrinter className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "T-Shirt Design",
-    icon: <BiSolidTShirt className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "Bill-Board Design",
-    icon: <FaClipboardList className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "Branding Design",
-    icon: <MdBrandingWatermark className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "Copyright Design",
-    icon: <FaCopyright className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "Business Card",
-    icon: <TiBusinessCard className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "Graphic Design",
-    icon: <IoLogoDesignernews className="text-current_color h-16 w-16" />,
-  },
-  {
-    title: "Custom Design",
-    icon: <TbSettingsStar className="text-current_color h-16 w-16" />,
-  },
-];
+import React from "react";
 
 export default function HeroServices() {
   return (
-    <div className="bg-gray-50/70 md:py-16">
-      <div className="max-w-7xl mx-5 md:mx-10 xl:mx-auto py-20 ">
-        <div className="text-center">
-          <p className="pb-1 text-xl text-current_color">Services</p>
-          <h2 className="text-4xl md:text-6xl font-playfair font-semibold">
-            Our Best Services
-          </h2>
-        </div>
-        <div className="pt-28 space-y-10 md:grid grid-cols-3 xl:grid-cols-4 auto-rows-auto gap-14">
-          {CardData.map(({ title, icon }, index) => (
-            <div
-              key={index}
-              className="py-[70px] group ease-in-out duration-300 hover:shadow-red-400 shadow-md rounded-lg bg-white flex flex-col justify-center items-center"
-            >
-              <div className="pb-5 group-hover:-translate-y-2 group-hover:ease-in-out group-hover:duration-300">
-                {icon}
-              </div>
-              <p className="text-xl lg:text-2xl font-playfair font-semibold text-neutral-600 tracking-wide">
-                {title}
+    <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/servicesBackground.jpg')]">
+      <div className="bg-gray-900 pt-72 pb-40 bg-opacity-65">
+        <div className="max-w-7xl mx-auto px-5">
+          <div>
+            <h1>
+              <span className="block font-handle text-xl font-semibold text-yellow-500">
+                Services
+              </span>
+              <span className="sr-only"> - </span>
+              <span className="mt-4 block max-w-7xl text-4xl sm:text-7xl font-playfair font-semibold tracking-wide text-white [text-wrap:balance]">
+                Our best services here
+              </span>
+            </h1>
+            <div className="pt-20 max-w-5xl text text-xl space-y-8 tracking-wide text-gray-50 leading-8">
+              <p>
+                At Sun Printing Press, we offer a comprehensive range of
+                printing and design services tailored to meet the diverse needs
+                of our clients. Our commitment to excellence and attention to
+                detail ensure that each project is completed with precision and
+                quality. Explore our wide array of services below:
+              </p>
+              <p>
+                At Sun Printing Press, we prioritize teamwork and camaraderie.
+                We view our team members not just as colleagues, but as integral
+                members of our family. This means we foster an environment of
+                mutual respect and support. While we value hard work and
+                dedication, we also believe in maintaining a healthy work-life
+                balance. We understand the importance of personal time and
+                strive to ensure our employees have the flexibility they need to
+                thrive both professionally and personally.
+              </p>
+              <ul className="pl-6 space-y-5 text-lg">
+                <li>
+                  <strong>1. Business Stationery Printing:</strong> From
+                  business cards to letterheads, we provide high-quality
+                  printing for all your stationery needs, helping you make a
+                  lasting impression on your clients and partners.
+                </li>
+                <li>
+                  <strong>2. Marketing Materials Printing: </strong>
+                  Elevate your marketing efforts with our professionally printed
+                  materials, including flyers, brochures, posters, and banners,
+                  designed to attract attention and promote your brand
+                  effectively.
+                </li>
+                <li>
+                  <strong>3. Packaging Printing: </strong>
+                  Ensure your products stand out on the shelves with our custom
+                  packaging solutions. We offer packaging printing services for
+                  various industries, helping you create eye-catching designs
+                  that enhance your brand image.
+                </li>
+                <li>
+                  <strong>4. Publishing Services: </strong>
+                  Whether you're publishing a book, magazine, or catalog, we
+                  provide comprehensive publishing services, including printing,
+                  binding, and finishing, to bring your publication to life with
+                  professional quality.
+                </li>
+                <li>
+                  <strong>5. Gift Items Printing: </strong>
+                  Personalize your gifts and giveaways with our custom printing
+                  services. From mugs to t-shirts, we offer printing on a wide
+                  range of gift items, allowing you to create memorable
+                  keepsakes for your clients and employees.
+                </li>
+                <li>
+                  <strong>6. Garments Accessories Printing: </strong>
+                  Add a personal touch to your garments and accessories with our
+                  custom printing solutions. Whether you need logo embroidery or
+                  custom tags, we have the expertise to meet your requirements
+                  with precision and style.
+                </li>
+              </ul>
+
+              <p>
+                <strong>Finishing and Binding Options: </strong> Our wide range
+                of finishing and binding options, including Glossy Lamination,
+                Mat Lamination, Foil Lamination, wire o binding, Spiral Binding,
+                Staple Binding, Perfect binding, Folding, Numbering, Die
+                cutting, Cheque Parpeting, Foil stamp, Embossing, Punching
+                Pasting, Book binding, and Half Die Cutting, ensure that your
+                printed materials are finished to perfection, making them stand
+                out from the crowd.
+              </p>
+              <p>
+                Trust Sun Printing Press for all your printing and design needs.
+                Contact us today to discuss your project requirements and
+                experience the difference of working with a trusted partner
+                committed to excellence.
               </p>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>

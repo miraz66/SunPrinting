@@ -22,7 +22,7 @@ export default function HeroSection() {
                 When we say we’re not happy until you’re happy, we really do
                 mean it. You <br /> will be happy with service.
               </p>
-              <div className="group">
+              <div className="group contents">
                 <button
                   onClick={() => setIsModalOpen(true)}
                   className="text-lg mt-14 sm:mt-24 flex gap-2 items-center ease-in-out duration-500 font-medium rounded-lg bg-primary group-hover:bg-secondary text-secondary_color px-6 py-3"

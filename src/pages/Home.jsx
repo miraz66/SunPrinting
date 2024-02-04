@@ -2,26 +2,26 @@ import Award from "../components/Award";
 import Blog from "../components/Blog";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
-import HeroAbout from "../components/HeroAbout";
+import AboutHome from "../components/AboutHome";
 import HeroSection from "../components/HeroSection";
-import HeroServices from "../components/HeroServices";
+import ServicesHome from "../components/ServicesHome";
 import Navbar from "../components/Navbar";
 import TailUsProject from "../components/TailUsProject";
-import WhatsAppWidget from "../components/WhatsAppWidget";
+// import WhatsAppWidget from "../components/WhatsAppWidget";
 
 export default function Home() {
   return (
     <div className="bg-white">
       <Navbar />
       <HeroSection />
-      <HeroAbout />
+      <AboutHome />
       <Blog />
-      <HeroServices />
+      <ServicesHome />
       <Award />
       <Faq />
-      <TailUsProject />
+      <TailUsProject className="-mt-64 mx-5 sm:mx-10 xl:mx-0" />
       <Footer />
-      <WhatsAppWidget />
+      {/* <WhatsAppWidget /> */}
     </div>
   );
 }
