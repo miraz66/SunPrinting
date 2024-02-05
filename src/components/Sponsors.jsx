@@ -81,7 +81,7 @@ export default function Sponsors({ className }) {
           {BrandLogoData.map(({ alt, logo }, index) => (
             <img
               key={index}
-              className="opacity-60 hover:opacity-100 ease-in-out duration-300"
+              className="opacity-60 mx-auto hover:opacity-100 ease-in-out duration-300"
               src={logo}
               alt={alt}
             />

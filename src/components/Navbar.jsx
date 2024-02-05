@@ -145,18 +145,18 @@ export default function Navbar() {
             </div>
 
             <Disclosure.Panel className="lg:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2">
+              <div className="space-y-1 px-2 flex flex-col pb-3 pt-2">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
                     as="NavLink"
                     to={item.href}
                     className={({ isActive }) => {
-                      return (
-                        "px-3 font-medium" +
-                        (!isActive
-                          ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
-                          : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
+                      return clsx(
+                        "rounded-md px-5 py-2 text-base font-medium",
+                        isActive
+                          ? "bg-primary text-gray-700"
+                          : "text-gray-600 hover:bg-muted hover:text-black"
                       );
                     }}
                     aria-current={item.current ? "page" : undefined}

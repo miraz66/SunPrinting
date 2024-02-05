@@ -1,7 +1,10 @@
-import React from "react";
+import { useState } from "react";
 import CultureSection from "./CultureSection";
+import clsx from "clsx";
 
 export default function HeroAbout() {
+  const [readMore, setReadMore] = useState(true);
+
   return (
     <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/aboutBackground.png')]">
       <div className="bg-gray-900 pt-72 bg-opacity-50">
@@ -16,7 +19,12 @@ export default function HeroAbout() {
                 Our strength is collaboration
               </span>
             </h1>
-            <div className="mt-6 max-w-3xl font-playfair text-xl tracking-wide text-white">
+            <div
+              className={clsx(
+                "pt-6 max-w-5xl text text-xl tracking-wide text-gray-50 leading-8",
+                readMore ? "line-clamp-6" : "line-clamp-none"
+              )}
+            >
               <p className="pb-20 text-gray-50 font-handle leading-8">
                 We believe that our strength lies in our collaborative approach,
                 which puts our clients at the center of everything we do.
@@ -39,6 +47,14 @@ export default function HeroAbout() {
                 thrive both professionally and personally.
               </p>
             </div>
+            {readMore ? (
+              <button
+                className="hover:text-gray-200 text-white mt-4"
+                onClick={() => setReadMore(!readMore)}
+              >
+                Read more...
+              </button>
+            ) : null}
           </div>
         </div>
         <CultureSection />
