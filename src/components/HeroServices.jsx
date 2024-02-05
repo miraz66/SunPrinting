@@ -1,6 +1,9 @@
-import React from "react";
+import clsx from "clsx";
+import React, { useState } from "react";
 
 export default function HeroServices() {
+  const [readMore, setReadMore] = useState(true);
+
   return (
     <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/servicesBackground.jpg')]">
       <div className="bg-gray-900 pt-72 pb-40 bg-opacity-65">
@@ -15,7 +18,12 @@ export default function HeroServices() {
                 Our best services here
               </span>
             </h1>
-            <div className="pt-20 max-w-5xl text text-xl space-y-8 tracking-wide text-gray-50 leading-8">
+            <div
+              className={clsx(
+                "pt-20 max-w-5xl text text-xl space-y-8 tracking-wide text-gray-50 leading-8",
+                readMore ? "line-clamp-6" : "line-clamp-none"
+              )}
+            >
               <p>
                 At Sun Printing Press, we offer a comprehensive range of
                 printing and design services tailored to meet the diverse needs
@@ -94,6 +102,21 @@ export default function HeroServices() {
                 committed to excellence.
               </p>
             </div>
+            {readMore ? (
+              <button
+                className="bg-primary hover:bg-muted px-8 py-3 rounded-md ease-in-out duration-300 mt-20"
+                onClick={() => setReadMore(!readMore)}
+              >
+                Read more...
+              </button>
+            ) : (
+              <button
+                className="bg-primary hover:bg-muted px-8 py-3 rounded-md ease-in-out duration-300 mt-20"
+                onClick={() => setReadMore(!readMore)}
+              >
+                Read less
+              </button>
+            )}
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ export default function CarouselImg() {
         swipeable
       >
         {Data.map(({ name, product, images, logo }) => (
-          <div className="px-4 rounded-lg">
+          <div key={name} className="px-4 rounded-lg">
             <img
               className="h-[27rem] w-full rounded-t-lg"
               src={images}

@@ -7,11 +7,11 @@
 @tailwind utilities;
 
 :root {
-  --background-primary-color: 234, 179, 8;
+  --background-primary-color: 234, 179, 8; /* yellow 500 */
   --background-secondary-color: 220, 38, 38; /* red 600 */
-  --background-muted-color: 254, 249, 195;
-  --text-primary-color: 0, 0, 0;
-  --text-secondary-color: 38, 38, 38;
-  --text-muted-color: 255, 255, 255;
+  --background-muted-color: 253, 224, 71; /* yellow 300 */
+  --text-primary-color: 0, 0, 0; /* black */
+  --text-secondary-color: 38, 38, 38; /* neutral-800 */
+  --text-muted-color: 255, 255, 255; /* white */
   --text-current-color: 220, 38, 38; /* red 600 */
 }

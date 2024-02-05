@@ -5,32 +5,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Projects from "./pages/Projects";
+import Owner from "./pages/Owner";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
-
   return (
     <div className="bg-green-50">
       <div className="font-rubik bg-black overflow-x-hidden">
         <BrowserRouter>
           <Routes>
-            <Route
-              path="/"
-              element={<Home isOpen={isOpen} setIsOpen={setIsOpen} />}
-            />
-            <Route
-              path="/about"
-              element={<About isOpen={isOpen} setIsOpen={setIsOpen} />}
-            />
-            <Route
-              path="/services"
-              element={<Services isOpen={isOpen} setIsOpen={setIsOpen} />}
-            />
-            <Route
-              path="projects"
-              element={<Projects isOpen={isOpen} setIsOpen={setIsOpen} />}
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/owner/:name" element={<Owner />} />
           </Routes>
         </BrowserRouter>
       </div>

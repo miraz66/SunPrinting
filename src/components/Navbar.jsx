@@ -4,12 +4,16 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/SunPrintingLogo.png";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
+import HoverDropdown from "../components/DropdownTest";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Projects", href: "/projects" },
+  {
+    name: HoverDropdown,
+    href: "/owner/Sun%20sporting%20club",
+  },
 ];
 
 export default function Navbar() {
