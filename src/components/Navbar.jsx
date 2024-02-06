@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/SunPrintingLogo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import HoverDropdown from "../components/HoverDropdown";
 
@@ -17,9 +17,11 @@ const navigation = [
 ];
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <div className="fixed w-full z-50">
-      <Disclosure as="nav" className="bg-white bg-opacity-95 shadow-lg">
+      <Disclosure as="nav" className="bg-white bg-opacity-95">
         {({ open }) => (
           <>
             <div className="lg:mx-5 xl:mx-auto max-w-7xl px-2 sm:px-6 lg:px-0 py-1">
@@ -37,7 +39,10 @@ export default function Navbar() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
-                  <div className="flex flex-shrink-0 items-center">
+                  <button
+                    onClick={() => navigate("/")}
+                    className="flex flex-shrink-0 items-center"
+                  >
                     <img
                       className="h-14 sm:h-16 pr-2 md:pr-2 md:h-20 w-auto"
                       src={logo}
@@ -47,7 +52,7 @@ export default function Navbar() {
                     <div className="text-xl sm:text-3xl text-neutral-600 md:text-4xl font-serif tracking-wide font-semibold">
                       Sun Printing press
                     </div>
-                  </div>
+                  </button>
                 </div>
                 <div className="hidden sm:ml-6 lg:block">
                   <div className="flex space-x-4">
@@ -55,6 +60,7 @@ export default function Navbar() {
                       <NavLink
                         key={item.name}
                         to={item.href}
+                        onClick={() => navigate(item.href)}
                         className={({ isActive }) => {
                           return clsx(
                             "rounded-md px-5 py-2 text-base font-medium",
@@ -71,76 +77,12 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <Menu as="div" className="relative ml-3 hidden lg:block">
-                  <div>
-                    <Menu.Button className="relative tracking-wide flex rounded-full text-white px-6 py-2 bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <p>Contact</p>
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={({ isActive }) => {
-                              return (
-                                "px-3 font-medium" +
-                                (!isActive
-                                  ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
-                                  : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
-                              );
-                            }}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={({ isActive }) => {
-                              return (
-                                "px-3 font-medium" +
-                                (!isActive
-                                  ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
-                                  : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
-                              );
-                            }}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={({ isActive }) => {
-                              return (
-                                "px-3 font-medium" +
-                                (!isActive
-                                  ? "after:content-[' '] after:bg-red-500 after:m-auto after:block after:w-0 after:h-[2px] after:ease-in after:duration-300 after:hover:w-full cursor-pointer lg:text-sm xl:text-lg"
-                                  : "cursor-pointer border-b-2 border-red-600 lg:text-sm xl:text-lg")
-                              );
-                            }}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
+                <Link
+                  to={"/contact"}
+                  className="ml-5 relative tracking-wide flex rounded-full text-white px-6 py-2 bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  Contact
+                </Link>
               </div>
             </div>
 

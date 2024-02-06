@@ -9,7 +9,7 @@ export default function CarouselImg() {
         additionalTransfrom={0}
         arrows
         autoPlay
-        autoPlaySpeed={4000}
+        autoPlaySpeed={3000}
         centerMode={false}
         className=""
         containerClass="container-with-dots"

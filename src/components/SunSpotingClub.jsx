@@ -109,7 +109,7 @@ export default function SunSportingClub() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-28 md:py-40 space-y-40">
+      <div className="bg-white py- md:py-40 space-y-40">
         {Data.map((data, i) => (
           <SportingBlog {...data} key={i} />
         ))}
