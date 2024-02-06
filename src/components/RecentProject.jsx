@@ -3,7 +3,7 @@ import CarouselImg from "./CarouselImg";
 export default function RecentProject() {
   return (
     <div className="bg-white py-32">
-      <div className="max-w-7xl space-y-8 xl:mx-auto text-center">
+      <div className="max-w-7xl space-y-8 mx-5 xl:mx-auto text-center">
         <h3 className="text-5xl font-handle font-bold text-current_color">
           Recent Project
         </h3>

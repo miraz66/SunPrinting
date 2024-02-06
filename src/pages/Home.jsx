@@ -19,7 +19,7 @@ export default function Home() {
       <ServicesHome />
       <Award />
       <Faq />
-      <TailUsProject className="-mt-64 mx-5 sm:mx-10 xl:mx-0" />
+      <TailUsProject className="mx-5 mt-40 sm:mx-10 xl:mx-0" />
       <Footer />
       {/* <WhatsAppWidget /> */}
     </div>

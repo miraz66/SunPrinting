@@ -2,21 +2,30 @@ const cultureData = [
   {
     title: "Underpaid employees",
     value: "35",
+    name: "Loyalty",
+    deceptions:
+      "Our team has been with us since the beginning because none of them are allowed to have LinkedIn profiles.",
   },
   {
     title: "Placated clients",
     value: "52",
+    name: "Trust",
+    deceptions:
+      " We don’t care when our team works just as long as they are working every waking second.",
   },
   {
     title: "Invoices billed",
     value: "$25M",
+    name: "Compassion",
+    deceptions:
+      "You never know what someone is going through at home and we make sure to never find out.",
   },
 ];
 
 export default function CultureSection() {
   return (
     <>
-      <div className="pt-80 md:pt-52 lg:pt-24 xl:pt-20">
+      <div className="pt-20 md:pt-52 lg:pt-24 xl:pt-20">
         <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-3 max-md:gap-10">
           {cultureData.map(({ title, value }) => (
             <div
@@ -45,7 +54,7 @@ export default function CultureSection() {
                     Balance your passion with your passion for life.
                   </span>
                 </h2>
-                <div className="mt-6 text-xl text-neutral-300">
+                <div className="mt-6 text-xl text-white">
                   <p>
                     We are a group of like-minded people who share the same core
                     values.
@@ -62,39 +71,21 @@ export default function CultureSection() {
                   role="list"
                   className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3"
                 >
-                  <li className="text-base text-neutral-300 before:bg-white after:bg-white/10">
-                    <div style={{ opacity: 1, transform: "none" }}>
-                      <div className="pl-8 relative before:absolute after:absolute before:bg-white after:bg-white/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px">
-                        <strong className="font-semibold text-white">
-                          Loyalty.
-                        </strong>{" "}
-                        Our team has been with us since the beginning because
-                        none of them are allowed to have LinkedIn profiles.
+                  {cultureData.map(({ name, deceptions }, i) => (
+                    <li
+                      key={i}
+                      className="text-base text-neutral-300 before:bg-white after:bg-white/10"
+                    >
+                      <div style={{ opacity: 1, transform: "none" }}>
+                        <div className="pl-8 relative before:absolute after:absolute before:bg-white after:bg-white/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px">
+                          <strong className="font-semibold text-white">
+                            {name}
+                          </strong>{" "}
+                          {deceptions}
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li className="text-base text-neutral-300 before:bg-white after:bg-white/10">
-                    <div style={{ opacity: 1, transform: "none" }}>
-                      <div className="pl-8 relative before:absolute after:absolute before:bg-white after:bg-white/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px">
-                        <strong className="font-semibold text-white">
-                          Trust.
-                        </strong>{" "}
-                        We don’t care when our team works just as long as they
-                        are working every waking second.
-                      </div>
-                    </div>
-                  </li>
-                  <li className="text-base text-neutral-300 before:bg-white after:bg-white/10">
-                    <div style={{ opacity: 1, transform: "none" }}>
-                      <div className="pl-8 relative before:absolute after:absolute before:bg-white after:bg-white/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px">
-                        <strong className="font-semibold text-white">
-                          Compassion.
-                        </strong>{" "}
-                        You never know what someone is going through at home and
-                        we make sure to never find out.
-                      </div>
-                    </div>
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

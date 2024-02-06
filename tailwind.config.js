@@ -21,6 +21,7 @@ export default {
         rubik: ["Rubik", "sans-serif"],
         handle: ["Handlee", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
+        display: ["Montserrat", "sans-serif"],
       },
       backgroundColor: {
         primary: withOpacity("--background-primary-color"),

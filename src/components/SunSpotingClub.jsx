@@ -11,7 +11,7 @@ export default function SunSportingClub() {
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/jeffrey-f-lin-6k0VD3xNw6U-unsplash.jpg')]">
-        <div className="bg-gray-900 pt-72 pb-40 bg-opacity-65">
+        <div className="bg-gray-900 pt-48 lg:pt-60 xl:pt-72 pb-24 md:pb-40 bg-opacity-65">
           <div className="max-w-7xl mx-auto px-5">
             <div>
               <h1 className="flex gap-5 items-center">
@@ -23,7 +23,7 @@ export default function SunSportingClub() {
               </h1>
               <div
                 className={clsx(
-                  "pt-20 max-w-5xl text text-xl space-y-8 tracking-wide text-gray-50 leading-8",
+                  "pt-20 max-w-5xl text-xl space-y-8 tracking-wide text-gray-50 leading-8",
                   readMore ? "line-clamp-6" : "line-clamp-none"
                 )}
               >
@@ -109,7 +109,7 @@ export default function SunSportingClub() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-40 space-y-40">
+      <div className="bg-white py-28 md:py-40 space-y-40">
         {Data.map((data, i) => (
           <SportingBlog {...data} key={i} />
         ))}

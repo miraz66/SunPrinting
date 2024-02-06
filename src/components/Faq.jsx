@@ -4,7 +4,7 @@ import faqImg from "../assets/faq-img.png";
 
 export default function Faq() {
   return (
-    <div className="h-[70rem] lg:h-[75rem] bg-gray-50/60 pt-20 md:pt-32 lg:pt-40">
+    <div className="bg-gray-50/60 pt-20 md:py-32 lg:pt-40">
       <div className="max-w-7xl mx-5 md:mx-10 xl:mx-auto lg:grid gap-10 grid-cols-2">
         <div>
           <h6 className="text-2xl text-current_color font-handle">Faq</h6>

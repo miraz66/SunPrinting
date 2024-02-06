@@ -38,17 +38,17 @@ const TopServicesData = [
 export default function TopServices() {
   return (
     <div className="bg-white">
-      <div className="pt-52 pb-32 mx-auto max-w-7xl">
+      <div className="pt-40 md:pt-52 lg:pt-52 md:pb-32 mx-5 xl:mx-auto max-w-7xl">
         <h4 className="pb-20 text-current_color font-bold text-center text-5xl font-handle">
           New Year, Top Services
         </h4>
-        <div className="grid grid-cols-4 auto-rows-auto gap-14">
+        <div className="max-md:mx-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-auto gap-14">
           {TopServicesData.map(({ img, title }) => (
             <div
               key={title}
               className="shadow hover:shadow-xl ease-in-out duration-200"
             >
-              <img src={img} alt="" />
+              <img className="w-full" src={img} alt="" />
               <p className="text-xl text-yellow-500 py-4 font-playfair font-semibold text-center">
                 {title}
               </p>

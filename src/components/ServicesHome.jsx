@@ -9,7 +9,7 @@ import { TbSettingsStar } from "react-icons/tb";
 const CardData = [
   {
     title: "Printing Service",
-    icon: <BiSolidPrinter className="text-current_color h-16 w-16" />,
+    icon: <BiSolidPrinter className="text-current_color h-14 w-14" />,
   },
   {
     title: "T-Shirt Design",
@@ -51,7 +51,7 @@ export default function ServicesHome() {
             Our Best Services
           </h2>
         </div>
-        <div className="pt-28 space-y-10 md:grid grid-cols-3 xl:grid-cols-4 auto-rows-auto gap-14">
+        <div className="pt-28 space-y-10 md:space-y-0 md:grid grid-cols-3 xl:grid-cols-4 auto-rows-auto gap-14">
           {CardData.map(({ title, icon }, index) => (
             <div
               key={index}

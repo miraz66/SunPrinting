@@ -6,7 +6,7 @@ export default function HeroServices() {
 
   return (
     <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/servicesBackground.jpg')]">
-      <div className="bg-gray-900 pt-72 pb-40 bg-opacity-65">
+      <div className="bg-gray-900 pt-48 lg:60 xl:pt-72 pb-24 md:pb-40 bg-opacity-65">
         <div className="max-w-7xl mx-auto px-5">
           <div>
             <h1>

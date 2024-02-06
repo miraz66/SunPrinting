@@ -8,7 +8,7 @@ export default function SportingBlog({
   images,
 }) {
   return (
-    <div className="max-w-4xl mx-auto space-y-12">
+    <div className="max-w-4xl mx-5 xl:mx-auto space-y-10 md:space-y-12">
       <div>
         <h1 className="pb-3 text-4xl font-bold text-neutral-700">{title}</h1>
         <p>{location}</p>

@@ -7,7 +7,7 @@ export default function HeroAbout() {
 
   return (
     <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/aboutBackground.png')]">
-      <div className="bg-gray-900 pt-72 bg-opacity-50">
+      <div className="bg-gray-900 pt-48 md:pt-60 lg:pt-72 bg-opacity-50">
         <div className="max-w-7xl mx-auto px-5">
           <div>
             <h1>
@@ -15,7 +15,7 @@ export default function HeroAbout() {
                 About us
               </span>
               <span className="sr-only"> - </span>
-              <span className="mt-4 block max-w-7xl text-4xl sm:text-7xl font-playfair font-display font-semibold tracking-wide text-white [text-wrap:balance]">
+              <span className="mt-4 block max-w-7xl text-4xl sm:text-7xl font-playfair font-semibold tracking-wide text-white [text-wrap:balance]">
                 Our strength is collaboration
               </span>
             </h1>
@@ -25,11 +25,11 @@ export default function HeroAbout() {
                 readMore ? "line-clamp-6" : "line-clamp-none"
               )}
             >
-              <p className="pb-20 text-gray-50 font-handle leading-8">
+              <p className="pb-10 md:pb-20 text-gray-50 font-handle leading-8">
                 We believe that our strength lies in our collaborative approach,
                 which puts our clients at the center of everything we do.
               </p>
-              <p className="text-xl pb-5 text-gray-50 leading-8">
+              <p className="text-lg font-xl tracking-wide pb-5 text-gray-100 leading-8">
                 Sun Printing Press was founded by three friends who observed
                 that traditional printing services were charging clients double
                 what an in-house team would cost. Since our inception, we have

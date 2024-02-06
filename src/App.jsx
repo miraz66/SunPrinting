@@ -10,7 +10,7 @@ import Owner from "./pages/Owner";
 function App() {
   return (
     <div className="bg-green-50">
-      <div className="font-rubik bg-black overflow-x-hidden">
+      <div className="bg-black font-display overflow-x-hidden">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />

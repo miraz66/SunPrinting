@@ -12,7 +12,7 @@ export default function MozzamelHuqueSritisoggo() {
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-center bg-[url('./assets/jigar-panchal-711byojMaQ0-unsplash.jpg')]">
-        <div className="bg-gray-900 pt-72 pb-40 bg-opacity-65">
+        <div className="bg-gray-900 pt-48 md:pt-60 lg:pt-72 pb-28 md:pb-40 bg-opacity-65">
           <div className="max-w-7xl mx-auto px-5">
             <div>
               <h1 className="flex gap-5 items-center">
@@ -24,7 +24,7 @@ export default function MozzamelHuqueSritisoggo() {
               </h1>
               <div
                 className={clsx(
-                  "pt-20 max-w-5xl text text-xl space-y-8 tracking-wide text-gray-50 leading-8",
+                  "pt-20 max-w-5xl text text-xl space-y-8 text-gray-50 leading-8",
                   readMore ? "line-clamp-6" : "line-clamp-none"
                 )}
               >
@@ -111,7 +111,7 @@ export default function MozzamelHuqueSritisoggo() {
         </div>
       </div>
 
-      <div className="bg-white py-40 space-y-40">
+      <div className="bg-white py-40 space-y-24 md:space-y-40">
         {Data.map((data, i) => (
           <SportingBlog {...data} key={i} />
         ))}

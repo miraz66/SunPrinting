@@ -14,10 +14,10 @@ const Data = {
 export default function Footer() {
   return (
     <>
-      <div className="bg-white font-playfair py-20">
-        <div className="max-w-7xl mx-auto px-5 xl:px-10 pt-10">
-          <div className="grid lg:grid-cols-3 max-lg:gap-10">
-            <div className="md:col-span-2 grid max-md:grid-rows-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="bg-white font-playfair">
+        <div className="max-w-7xl px-5 md:mx-auto pt-20 md:pt-40">
+          <div className="grid lg:grid-cols-8 max-lg:gap-10">
+            <div className="md:col-span-6 grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-3">
               <ul className="flex flex-col gap-3">
                 <li className="text-xl font-semibold">Owner</li>
                 {Data.owner.map((data, i) => (
@@ -55,7 +55,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
+            <div className="md:col-span-2 max-md:hidden">
               <form className="max-w-sm">
                 <h2 className="font-display text-2xl lg:text-xl font-semibold tracking-wider text-neutral-950">
                   Sign up for our newsletter
@@ -99,7 +99,7 @@ export default function Footer() {
               <p className="text-xl sm:text-3xl">Sun Printing Press</p>
             </a>
             <p className="text-xs md:text-sm font-playfair text-neutral-700">
-              ©Copyright 2024 - Sun Printing Press. All Rights Reserved.
+              © Copyright 2024 - Sun Printing Press. All Rights Reserved.
             </p>
           </div>
         </div>

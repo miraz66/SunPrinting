@@ -46,7 +46,7 @@ export default function DetailsAccordions() {
                     )}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-8 pb-2 pt-4 sm:text-xl text-gray-500">
+                <Disclosure.Panel className="px-8 pb-2 pt-4 sm:text-lg text-gray-700">
                   {description}
                 </Disclosure.Panel>
               </>
