@@ -79,7 +79,7 @@ export default function Navbar() {
 
                 <Link
                   to={"/contact"}
-                  className="ml-5 relative tracking-wide flex rounded-full text-white px-6 py-2 bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="ml-5 relative hidden md:block tracking-wide rounded-full text-white px-6 py-2 bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   Contact
                 </Link>
@@ -108,9 +108,12 @@ export default function Navbar() {
                 ))}
 
                 <div className="pt-5">
-                  <button className="block bg-secondary text-white rounded-md px-4 py-2 text-base font-medium">
+                  <Link
+                    to="/contact"
+                    className="bg-secondary text-white rounded-md px-4 py-2 text-base font-medium"
+                  >
                     Contact
-                  </button>
+                  </Link>
                 </div>
               </div>
             </Disclosure.Panel>

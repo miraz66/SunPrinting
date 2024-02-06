@@ -6,6 +6,7 @@ import SunSportingClub from "../components/SunSpotingClub";
 import YoungSunSportingClub from "../components/YoungSunSportingClub";
 import SunFootballAcademy from "../components/SunFootballAcademy";
 import MozzamelHuqueSritisoggo from "../components/MozzamelHuqueSritisoggo";
+import ScrollTopToButton from "../components/ScrollTopToButton";
 
 const Data = [
   {
@@ -33,6 +34,7 @@ export default function Owner() {
         ({ url, page }, index) =>
           name === url && <div key={index}>{[page]}</div>
       )}
+      <ScrollTopToButton />
     </div>
   );
 }

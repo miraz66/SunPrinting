@@ -5,6 +5,7 @@ import RecentProject from "../components/RecentProject";
 import TailUsProject from "../components/TailUsProject";
 import Sponsors from "../components/Sponsors";
 import Footer from "../components/Footer";
+import WhatsAppWidget from "../components/WhatsAppWidget";
 
 export default function Services() {
   return (
@@ -16,6 +17,7 @@ export default function Services() {
       <Sponsors className="bg-gray-100 py-40" />
       <TailUsProject className="bg-white pt-40" />
       <Footer />
+      <WhatsAppWidget />
     </div>
   );
 }
