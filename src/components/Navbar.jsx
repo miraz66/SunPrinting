@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/SunPrintingLogo.png";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
-import HoverDropdown from "../components/DropdownTest";
+import HoverDropdown from "../components/HoverDropdown";
 
 const navigation = [
   { name: "Home", href: "/" },

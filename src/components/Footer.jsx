@@ -1,63 +1,58 @@
 import SunLogo from "../assets/SunPrintingLogo.png";
 
+const Data = {
+  owner: [
+    "Sun sporting club",
+    "Young sun sporting club",
+    "Sun Football Academy",
+    "Md.Mozzamel huque sritisoggo",
+  ],
+  company: ["Home", "About", "Services", "Owner", "Contact us"],
+  Connect: ["Facebook", "Twitter", "Instagram", "YouTube"],
+};
+
 export default function Footer() {
   return (
     <>
-      <div className="bg-white pt-28 font-playfair">
+      <div className="bg-white font-playfair py-20">
         <div className="max-w-7xl mx-auto px-5 xl:px-10 pt-10">
           <div className="grid lg:grid-cols-3 max-lg:gap-10">
             <div className="md:col-span-2 grid max-md:grid-rows-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <ul className="flex flex-col gap-3">
                 <li className="text-xl font-semibold">Owner</li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  FamilyFund
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Unseal
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Phobia
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  See all →
-                </li>
+                {Data.owner.map((data, i) => (
+                  <li
+                    key={i}
+                    className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
+                  >
+                    {data}
+                  </li>
+                ))}
               </ul>
 
               <ul className="flex flex-col gap-3">
                 <li className="text-xl font-semibold">Company</li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  About
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Process
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Blog
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Contact us
-                </li>
+                {Data.company.map((data, i) => (
+                  <li
+                    key={i}
+                    className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
+                  >
+                    {data}
+                  </li>
+                ))}
               </ul>
 
               <ul className="flex flex-col gap-3">
                 <li className="text-xl font-semibold">Connect</li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Facebook
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Instagram
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Twitter
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  GitHub
-                </li>
-                <li className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200">
-                  Dribbble
-                </li>
+                {Data.Connect.map((data, i) => (
+                  <li
+                    key={i}
+                    className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
+                  >
+                    {data}
+                  </li>
+                ))}
               </ul>
-              <div></div>
             </div>
 
             <div>
