@@ -34,7 +34,7 @@ function ScrollTopToButton() {
   return (
     <button
       className={clsx(
-        "fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50 p-4 rounded-full bg-secondary text-white",
+        "fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50 p-4 rounded-full bg-primary text-white",
         isVisible ? "block" : "hidden"
       )}
       onClick={scrollToTop}
