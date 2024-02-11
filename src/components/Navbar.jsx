@@ -6,7 +6,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import HoverDropdown from "../components/HoverDropdown";
 
-export default function Navbar() {
+export default function Navbar({ scrollToTop }) {
   const navigate = useNavigate();
   const [blogLink, setBlogLink] = useState("Sun sporting club");
 
@@ -21,8 +21,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed w-full z-50">
-      <Disclosure as="nav" className="bg-white bg-opacity-95">
+    <div id="nav" className="fixed w-full z-50">
+      <Disclosure as="nav" className="bg-white bg-opacity-90">
         {({ open }) => (
           <>
             <div className="lg:mx-5 xl:mx-auto max-w-7xl px-2 sm:px-6 lg:px-0 py-1">

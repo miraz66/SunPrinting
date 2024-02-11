@@ -23,7 +23,7 @@ export default function Footer() {
                 {Data.owner.map((data, i) => (
                   <li
                     key={i}
-                    className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
+                    className="text-neutral-600 text-lg hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
                   >
                     {data}
                   </li>
@@ -35,7 +35,7 @@ export default function Footer() {
                 {Data.company.map((data, i) => (
                   <li
                     key={i}
-                    className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
+                    className="text-neutral-600 text-lg hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
                   >
                     {data}
                   </li>
@@ -47,7 +47,7 @@ export default function Footer() {
                 {Data.Connect.map((data, i) => (
                   <li
                     key={i}
-                    className="text-neutral-600 text-lg font-medium hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
+                    className="text-neutral-600 text-lg hover:text-neutral-800 cursor-pointer ease-in-out duration-200"
                   >
                     {data}
                   </li>

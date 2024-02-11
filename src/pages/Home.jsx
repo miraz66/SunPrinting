@@ -9,10 +9,10 @@ import Navbar from "../components/Navbar";
 import TailUsProject from "../components/TailUsProject";
 import WhatsAppWidget from "../components/WhatsAppWidget";
 
-export default function Home() {
+export default function Home({ scrollToTop }) {
   return (
     <div className="bg-white">
-      <Navbar />
+      <Navbar scrollToTop={scrollToTop} />
       <HeroSection />
       <AboutHome />
       <Blog />

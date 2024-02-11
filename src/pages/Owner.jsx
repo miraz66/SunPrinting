@@ -24,12 +24,12 @@ const Data = [
   { url: "Md.Mozzamel huque sritisoggo", page: <MozzamelHuqueSritisoggo /> },
 ];
 
-export default function Owner() {
+export default function Owner({ scrollToTop }) {
   const { name } = useParams();
 
   return (
     <div>
-      <Navbar />
+      <Navbar scrollToTop={scrollToTop} />
       {Data.map(
         ({ url, page }, index) =>
           name === url && <div key={index}>{[page]}</div>

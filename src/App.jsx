@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //All pages
@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="bg-green-50">
+    <div id="top" className="bg-green-50">
       <div className="bg-black font-display overflow-x-hidden">
         <BrowserRouter>
           <Routes>
