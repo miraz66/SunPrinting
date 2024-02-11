@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Menu = [
   "Sun sporting club",
@@ -10,8 +10,9 @@ const Menu = [
   "Md.Mozzamel huque sritisoggo",
 ];
 
-export default function HoverDropdown() {
+export default function HoverDropdown({ setBlogLink }) {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="">

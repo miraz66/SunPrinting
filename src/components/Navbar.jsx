@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/SunPrintingLogo.png";
@@ -6,18 +6,19 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import HoverDropdown from "../components/HoverDropdown";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  {
-    name: HoverDropdown,
-    href: "/owner/Sun%20sporting%20club",
-  },
-];
-
 export default function Navbar() {
   const navigate = useNavigate();
+  const [blogLink, setBlogLink] = useState("Sun sporting club");
+
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    {
+      name: <HoverDropdown setBlogLink={setBlogLink} />,
+      href: "/owner/" + blogLink,
+    },
+  ];
 
   return (
     <div className="fixed w-full z-50">
@@ -60,7 +61,6 @@ export default function Navbar() {
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        onClick={() => navigate(item.href)}
                         className={({ isActive }) => {
                           return clsx(
                             "rounded-md px-5 py-2 text-base font-medium",
