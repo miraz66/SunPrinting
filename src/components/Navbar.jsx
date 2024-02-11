@@ -6,7 +6,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import HoverDropdown from "../components/HoverDropdown";
 
-export default function Navbar({ scrollToTop }) {
+export default function Navbar() {
   const navigate = useNavigate();
   const [blogLink, setBlogLink] = useState("Sun sporting club");
 
@@ -19,6 +19,13 @@ export default function Navbar({ scrollToTop }) {
       href: "/owner/" + blogLink,
     },
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div id="nav" className="fixed w-full z-50">
@@ -61,6 +68,8 @@ export default function Navbar({ scrollToTop }) {
                       <NavLink
                         key={item.name}
                         to={item.href}
+                        as="NavLink"
+                        onClick={scrollToTop}
                         className={({ isActive }) => {
                           return clsx(
                             "rounded-md px-5 py-2 text-base font-medium",
