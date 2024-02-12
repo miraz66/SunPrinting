@@ -100,8 +100,9 @@ export default function Navbar() {
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
-                    as="NavLink"
                     to={item.href}
+                    onClick={scrollToTop}
+                    as="NavLink"
                     className={({ isActive }) => {
                       return clsx(
                         "rounded-md px-5 py-2 text-base font-medium",
