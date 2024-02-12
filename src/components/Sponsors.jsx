@@ -19,7 +19,7 @@ export default function Sponsors({ className }) {
   return (
     <div className={className}>
       {" "}
-      <div className="max-w-7xl mx-10 xl:mx-auto text-secondary_color">
+      <div className="md:max-w-7xl md:mx-10 xl:mx-auto text-secondary_color">
         <p className="pb-20 text-center text-2xl font-handle">
           <span className="text-current_color">100+</span> Happy Sponsors
         </p>
@@ -57,7 +57,7 @@ export default function Sponsors({ className }) {
                 max: 464,
                 min: 0,
               },
-              items: 1,
+              items: 3,
               partialVisibilityGutter: 30,
             },
             tablet: {
@@ -81,7 +81,7 @@ export default function Sponsors({ className }) {
           {BrandLogoData.map(({ alt, logo }, index) => (
             <img
               key={index}
-              className="opacity-60 mx-auto hover:opacity-100 ease-in-out duration-300"
+              className="opacity-60 max-md:h-10 max-md:w-28 mx-auto hover:opacity-100 ease-in-out duration-300"
               src={logo}
               alt={alt}
             />
