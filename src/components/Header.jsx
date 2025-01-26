@@ -37,8 +37,8 @@ export default function Header() {
                       className="text-gray-400 lg:text-center font-bold text-3xl lg:text-2xl 2xl:text-5xl"
                       href="http://localhost:5173/"
                     >
-                      <span className="text-red-500">Blood</span>{" "}
-                      <span className="font-serif">Donate</span>
+                      <span className="text-red-500">Sun</span>{" "}
+                      <span className="font-serif">Printing Press</span>
                     </a>
                   </div>
                 </div>

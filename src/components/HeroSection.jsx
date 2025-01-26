@@ -42,7 +42,7 @@ export default function HeroSection() {
           className="fixed inset-0 flex justify-center items-center bg-opacity-70 bg-gray-900 z-50"
         >
           <VideoPlayer
-            src="kanHxPcIuQo"
+            src="mscqkyslM7A"
             className="w-96 h-60 lg:w-[35rem] lg:h-[22rem] xl:w-[60rem] xl:h-[43rem] rounded-md"
           />
         </Modal>
