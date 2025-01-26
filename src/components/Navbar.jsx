@@ -50,12 +50,12 @@ export default function Navbar() {
                     className="flex flex-shrink-0 items-center"
                   >
                     <img
-                      className="h-14 sm:h-16 pr-2 md:pr-2 md:h-20 w-auto"
+                      className="h-12 sm:h-14 pr-2 md:pr-2 md:h-20 w-auto"
                       src={logo}
                       alt="Your Company"
                     />
 
-                    <div className="text-xl sm:text-3xl text-neutral-600 md:text-4xl font-serif tracking-wide font-semibold">
+                    <div className="text-xl sm:text-3xl text-neutral-600 md:text-4xl font-serif tracking-tight font-semibold">
                       Sun Printing press
                     </div>
                   </button>

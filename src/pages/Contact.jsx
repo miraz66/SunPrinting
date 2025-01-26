@@ -5,8 +5,10 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <div className="bg-neutral-100">
-        <ContactFrom />
+      <div className="bg-red-500">
+        <div className="bg-white bg-opacity-95">
+          <ContactFrom />
+        </div>
       </div>
     </>
   );
