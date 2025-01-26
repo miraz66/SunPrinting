@@ -9,15 +9,13 @@ import HoverDropdown from "../components/HoverDropdown";
 export default function Navbar() {
   const navigate = useNavigate();
   const [blogLink, setBlogLink] = useState("Sun sporting club");
+  const [dropdownOpen, setDropdownOpen] = useState("");
 
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    {
-      name: <HoverDropdown setBlogLink={setBlogLink} />,
-      href: "/owner/" + blogLink,
-    },
+    {name: "Owner", href: "/owner/" + blogLink , down:true },
   ];
 
   const scrollToTop = () => {
@@ -65,23 +63,60 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 lg:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <NavLink
-                        key={item.name}
-                        to={item.href}
-                        as="NavLink"
-                        onClick={scrollToTop}
-                        className={({ isActive }) => {
-                          return clsx(
-                            "rounded-md px-5 py-2 text-base font-medium",
-                            isActive
-                              ? "bg-primary text-gray-700"
-                              : "text-gray-600 hover:bg-muted hover:text-black"
-                          );
-                        }}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </NavLink>
+                        <div
+                            key={item.name}
+                            className="relative"
+                            onMouseEnter={() => {
+                              item.name === "Owner" &&
+                              setDropdownOpen(item.name);
+                            }}
+                            onMouseLeave={() => {
+                              item.name === "Owner" && setDropdownOpen("");
+                            }}
+                        >
+                          <div className="py-8">
+                            <NavLink
+                                to={item.href}
+                                className={({ isActive }) => {
+                                  return clsx(
+                                      "rounded-md px-5 py-2 text-base font-medium flex items-center",
+                                      isActive
+                                          ? "bg-primary text-gray-700"
+                                          : "text-gray-600 hover:bg-muted hover:text-black"
+                                  );
+                                }}
+                                aria-current={item.current ? "page" : undefined}
+                            >
+                              {item.name}
+                              {item.down && (
+                                  <svg
+                                      aria-hidden="true"
+                                      className="ms-1 h-5 w-5 flex-none"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clipRule="evenodd"
+                                    />
+                                  </svg>
+                              )}
+                            </NavLink>
+                          </div>
+                          {
+                            <div>
+                              {item.name === "Owner" && (
+                                <HoverDropdown
+                                  setBlogLink={setBlogLink}
+                                  item={item}
+                                  dropdownOpen={dropdownOpen}
+                                />
+                              )}
+                            </div>
+                          }
+                      </div>
                     ))}
                   </div>
                 </div>
